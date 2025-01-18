@@ -1,71 +1,156 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
+﻿/* Footer Styles */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
 }
+.details-page {
+    background-image: url('https://images.unsplash.com/photo-1731607352247-663df98aa547?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+/* Main Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-links ul li, .footer-social ul li {
+        margin: 8px 0;
+    }
+
+        .footer-links ul li a, .footer-social ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+            .footer-links ul li a:hover, .footer-social ul li a:hover {
+                color: #0056b3;
+            }
+
+/* Social Media Links */
+.footer-social p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a202c;
+}
+
+    .footer-bottom p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .footer-bottom a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .footer-bottom a:hover {
+            color: #0056b3;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-links ul, .footer-social ul {
+        margin-top: 10px;
+    }
+}
+
+.user-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+    .user-card img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .user-card h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    .user-card p {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #777;
+    }
+
+    .user-card .city {
+        font-size: 14px;
+        color: #02899C;
+        font-weight: 500;
+    }
+
+    .user-card .links {
+        margin-top: 20px;
+    }
+
+        .user-card .links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #02899C;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+            .user-card .links a:hover {
+                color: #03BFCB;
+            }
+
+    .user-card .phone {
+        font-size: 14px;
+        color: #444;
+        margin-top: 10px;
+    }

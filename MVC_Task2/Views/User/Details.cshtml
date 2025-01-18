@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            overflow-x:hidden;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background-image: url('https://picsum.photos/1887/800');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .user-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .footer {
+            position: relative;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin: 5px 0;
+        }
+
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Details</h1>
+    <div class="user-card">
+        <p style="font:900; color:black; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">@Model.FirstName</p>
+        <a href="https://www.google.com/maps/place/@Model.City" class="city" target="_blank">@Model.City</a>
+
+        <p class="phone">Phone: @Model.Number</p>
+        <div class="links">
+            <a href="@Model.Github" target="_blank">GitHub</a>
+            <a href="@Model.LinkedIn" target="_blank">LinkedIn</a>
+        </div>
+        <a asp-action="Back" asp-controller="User">Back</a>
+    </div>
+    <div style="height:400px;"></div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2><a style="text-decoration:none; color:white ; font:900;" asp-action="Back" asp-controller="User">FindFreeLancer</a></h2>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <p>Follow us:</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/mirtalib-emirli-a66922287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
+                    <li>
+                        <a target="_blank" href="https://github.com/MirtalibEmirli">
+                            Github
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FindFreeLancer. All rights reserved.</p>
+            <p>By <a href="https://www.linkedin.com/in/mirtalib-emirli-a66922287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mirtalib Amirli</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

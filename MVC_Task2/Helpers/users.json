@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Description": "Software Developer",
+    "Skills": [ "C#", "ASP.NET Core", "React.js" ],
+    "Img": "https://randomuser.me/api/portraits/men/1.jpg",
+    "CityId": 101,
+    "Number": "+1234567890",
+    "Github": "https://github.com/johndoe",
+    "LinkedIn": "https://linkedin.com/in/johndoe"
+  },
+  {
+    "Id": 2,
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "Description": "UI/UX Designer",
+    "Skills": [ "Figma", "Photoshop", "Illustrator" ],
+    "Img": "https://randomuser.me/api/portraits/women/2.jpg",
+    "CityId": 102,
+    "Number": "+2345678901",
+    "Github": "https://github.com/janesmith",
+    "LinkedIn": "https://linkedin.com/in/janesmith"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Alice",
+    "LastName": "Johnson",
+    "Description": "Project Manager",
+    "Skills": [ "Agile", "Scrum", "Communication" ],
+    "Img": "https://randomuser.me/api/portraits/women/3.jpg",
+    "CityId": 103,
+    "Number": "+3456789012",
+    "Github": "https://github.com/alicejohnson",
+    "LinkedIn": "https://linkedin.com/in/alicejohnson"
+  },
+  {
+    "Id": 4,
+    "FirstName": "Bob",
+    "LastName": "Brown",
+    "Description": "Full Stack Developer",
+    "Skills": [ "JavaScript", "Node.js", "MongoDB" ],
+    "Img": "https://randomuser.me/api/portraits/men/4.jpg",
+    "CityId": 104,
+    "Number": "+4567890123",
+    "Github": "https://github.com/bobbrown",
+    "LinkedIn": "https://linkedin.com/in/bobbrown"
+  },
+  {
+    "Id": 5,
+    "FirstName": "Charlie",
+    "LastName": "Davis",
+    "Description": "Marketing Specialist",
+    "Skills": [ "SEO", "Content Strategy", "Social Media" ],
+    "Img": "https://randomuser.me/api/portraits/men/5.jpg",
+    "CityId": 105,
+    "Number": "+5678901234",
+    "Github": "https://github.com/charliedavis",
+    "LinkedIn": "https://linkedin.com/in/charliedavis"
+  },
+  {
+    "Id": 6,
+    "FirstName": "Dana",
+    "LastName": "Evans",
+    "Description": "Frontend Developer",
+    "Skills": [ "HTML", "CSS", "JavaScript" ],
+    "Img": "https://randomuser.me/api/portraits/women/6.jpg",
+    "CityId": 106,
+    "Number": "+6789012345",
+    "Github": "https://github.com/danaevans",
+    "LinkedIn": "https://linkedin.com/in/danaevans"
+  },
+  {
+    "Id": 7,
+    "FirstName": "Edward",
+    "LastName": "Garcia",
+    "Description": "Data Scientist",
+    "Skills": [ "Python", "Machine Learning", "SQL" ],
+    "Img": "https://randomuser.me/api/portraits/men/7.jpg",
+    "CityId": 107,
+    "Number": "+7890123456",
+    "Github": "https://github.com/edwardgarcia",
+    "LinkedIn": "https://linkedin.com/in/edwardgarcia"
+  },
+  {
+    "Id": 8,
+    "FirstName": "Fiona",
+    "LastName": "Hernandez",
+    "Description": "Database Administrator",
+    "Skills": [ "SQL", "PostgreSQL", "MySQL" ],
+    "Img": "https://randomuser.me/api/portraits/women/8.jpg",
+    "CityId": 108,
+    "Number": "+8901234567",
+    "Github": "https://github.com/fionahernandez",
+    "LinkedIn": "https://linkedin.com/in/fionahernandez"
+  },
+  {
+    "Id": 9,
+    "FirstName": "George",
+    "LastName": "Martinez",
+    "Description": "Security Expert",
+    "Skills": [ "Network Security", "Cryptography", "Penetration Testing" ],
+    "Img": "https://randomuser.me/api/portraits/men/9.jpg",
+    "CityId": 109,
+    "Number": "+9012345678",
+    "Github": "https://github.com/georgemartinez",
+    "LinkedIn": "https://linkedin.com/in/georgemartinez"
+  },
+  {
+    "Id": 10,
+    "FirstName": "Helen",
+    "LastName": "Moore",
+    "Description": "Quality Assurance Tester",
+    "Skills": [ "Automated Testing", "Bug Reporting", "Test Management" ],
+    "Img": "https://randomuser.me/api/portraits/women/10.jpg",
+    "CityId": 110,
+    "Number": "+1123456789",
+    "Github": "https://github.com/helenmoore",
+    "LinkedIn": "https://linkedin.com/in/helenmoore"
+  }
+]
