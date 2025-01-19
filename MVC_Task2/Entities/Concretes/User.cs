@@ -1,6 +1,7 @@
 ﻿using MVC_Task2.Entities.Abstracts;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVC_Task2.Entities.Concretes
 {
@@ -9,8 +10,11 @@ namespace MVC_Task2.Entities.Concretes
     {
         public string Github { get; set; }
         public string LinkedIn { get; set; }
+        [Required]
         public string Description { get; set; }
-        public List<string> Skills { get; set; }
-        public string Img { get; set; }
+        public List<string> Skills { get; set; } = new List<string>() { "C#",
+      "ASP.NET Core",
+      "React.js"};
+        public string Img { get; set; } = "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg";
     }
 }

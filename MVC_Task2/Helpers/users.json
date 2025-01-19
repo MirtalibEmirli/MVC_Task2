@@ -1,122 +1,195 @@
 [
   {
-    "Id": 1,
+    "Github": "https://github.com/johndoe",
+    "LinkedIn": "https://linkedin.com/in/johndoe",
+    "Description": "Software Developer",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/1.jpg",
+    "Id": "f77e4eb1-c437-48ba-9b8a-78b05c5cb5b5",
+    "CityId": 101,
     "FirstName": "John",
     "LastName": "Doe",
-    "Description": "Software Developer",
-    "Skills": [ "C#", "ASP.NET Core", "React.js" ],
-    "Img": "https://randomuser.me/api/portraits/men/1.jpg",
-    "CityId": 101,
-    "Number": "+1234567890",
-    "Github": "https://github.com/johndoe",
-    "LinkedIn": "https://linkedin.com/in/johndoe"
+    "Number": "\u002B1234567890"
   },
   {
-    "Id": 2,
+    "Github": "https://github.com/janesmith",
+    "LinkedIn": "https://linkedin.com/in/janesmith",
+    "Description": "UI/UX Designer",
+    "Skills": [
+      "Figma",
+      "Photoshop",
+      "Illustrator"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/2.jpg",
+    "Id": "b132f657-d3cc-4e7b-8b73-cf124f25a024",
+    "CityId": 102,
     "FirstName": "Jane",
     "LastName": "Smith",
-    "Description": "UI/UX Designer",
-    "Skills": [ "Figma", "Photoshop", "Illustrator" ],
-    "Img": "https://randomuser.me/api/portraits/women/2.jpg",
-    "CityId": 102,
-    "Number": "+2345678901",
-    "Github": "https://github.com/janesmith",
-    "LinkedIn": "https://linkedin.com/in/janesmith"
+    "Number": "\u002B2345678901"
   },
   {
-    "Id": 3,
+    "Github": "https://github.com/alicejohnson",
+    "LinkedIn": "https://linkedin.com/in/alicejohnson",
+    "Description": "Project Manager",
+    "Skills": [
+      "Agile",
+      "Scrum",
+      "Communication"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/3.jpg",
+    "Id": "9e05b729-b711-4f21-b6b7-44c6c6f6d779",
+    "CityId": 103,
     "FirstName": "Alice",
     "LastName": "Johnson",
-    "Description": "Project Manager",
-    "Skills": [ "Agile", "Scrum", "Communication" ],
-    "Img": "https://randomuser.me/api/portraits/women/3.jpg",
-    "CityId": 103,
-    "Number": "+3456789012",
-    "Github": "https://github.com/alicejohnson",
-    "LinkedIn": "https://linkedin.com/in/alicejohnson"
+    "Number": "\u002B3456789012"
   },
   {
-    "Id": 4,
+    "Github": "https://github.com/bobbrown",
+    "LinkedIn": "https://linkedin.com/in/bobbrown",
+    "Description": "Full Stack Developer",
+    "Skills": [
+      "JavaScript",
+      "Node.js",
+      "MongoDB"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/4.jpg",
+    "Id": "d843f9cc-6a82-4ebd-95e3-c26aa5a55392",
+    "CityId": 104,
     "FirstName": "Bob",
     "LastName": "Brown",
-    "Description": "Full Stack Developer",
-    "Skills": [ "JavaScript", "Node.js", "MongoDB" ],
-    "Img": "https://randomuser.me/api/portraits/men/4.jpg",
-    "CityId": 104,
-    "Number": "+4567890123",
-    "Github": "https://github.com/bobbrown",
-    "LinkedIn": "https://linkedin.com/in/bobbrown"
+    "Number": "\u002B4567890123"
   },
   {
-    "Id": 5,
+    "Github": "https://github.com/charliedavis",
+    "LinkedIn": "https://linkedin.com/in/charliedavis",
+    "Description": "Marketing Specialist",
+    "Skills": [
+      "SEO",
+      "Content Strategy",
+      "Social Media"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/5.jpg",
+    "Id": "a22e5be6-7c54-46f6-96b4-2f94a9b7d9d2",
+    "CityId": 105,
     "FirstName": "Charlie",
     "LastName": "Davis",
-    "Description": "Marketing Specialist",
-    "Skills": [ "SEO", "Content Strategy", "Social Media" ],
-    "Img": "https://randomuser.me/api/portraits/men/5.jpg",
-    "CityId": 105,
-    "Number": "+5678901234",
-    "Github": "https://github.com/charliedavis",
-    "LinkedIn": "https://linkedin.com/in/charliedavis"
+    "Number": "\u002B5678901234"
   },
   {
-    "Id": 6,
+    "Github": "https://github.com/danaevans",
+    "LinkedIn": "https://linkedin.com/in/danaevans",
+    "Description": "Frontend Developer",
+    "Skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/6.jpg",
+    "Id": "48668f60-8f58-4b46-826b-ec9d1f4f8d79",
+    "CityId": 106,
     "FirstName": "Dana",
     "LastName": "Evans",
-    "Description": "Frontend Developer",
-    "Skills": [ "HTML", "CSS", "JavaScript" ],
-    "Img": "https://randomuser.me/api/portraits/women/6.jpg",
-    "CityId": 106,
-    "Number": "+6789012345",
-    "Github": "https://github.com/danaevans",
-    "LinkedIn": "https://linkedin.com/in/danaevans"
+    "Number": "\u002B6789012345"
   },
   {
-    "Id": 7,
+    "Github": "https://github.com/edwardgarcia",
+    "LinkedIn": "https://linkedin.com/in/edwardgarcia",
+    "Description": "Data Scientist",
+    "Skills": [
+      "Python",
+      "Machine Learning",
+      "SQL"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/7.jpg",
+    "Id": "32b33e68-c61f-49d3-b0ef-bf27243d35db",
+    "CityId": 107,
     "FirstName": "Edward",
     "LastName": "Garcia",
-    "Description": "Data Scientist",
-    "Skills": [ "Python", "Machine Learning", "SQL" ],
-    "Img": "https://randomuser.me/api/portraits/men/7.jpg",
-    "CityId": 107,
-    "Number": "+7890123456",
-    "Github": "https://github.com/edwardgarcia",
-    "LinkedIn": "https://linkedin.com/in/edwardgarcia"
+    "Number": "\u002B7890123456"
   },
   {
-    "Id": 8,
+    "Github": "https://github.com/fionahernandez",
+    "LinkedIn": "https://linkedin.com/in/fionahernandez",
+    "Description": "Database Administrator",
+    "Skills": [
+      "SQL",
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/8.jpg",
+    "Id": "cb9eea49-379c-4d1f-87b8-10db071c23f1",
+    "CityId": 108,
     "FirstName": "Fiona",
     "LastName": "Hernandez",
-    "Description": "Database Administrator",
-    "Skills": [ "SQL", "PostgreSQL", "MySQL" ],
-    "Img": "https://randomuser.me/api/portraits/women/8.jpg",
-    "CityId": 108,
-    "Number": "+8901234567",
-    "Github": "https://github.com/fionahernandez",
-    "LinkedIn": "https://linkedin.com/in/fionahernandez"
+    "Number": "\u002B8901234567"
   },
   {
-    "Id": 9,
+    "Github": "https://github.com/georgemartinez",
+    "LinkedIn": "https://linkedin.com/in/georgemartinez",
+    "Description": "Security Expert",
+    "Skills": [
+      "Network Security",
+      "Cryptography",
+      "Penetration Testing"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/9.jpg",
+    "Id": "7c973b1d-9400-4b1e-b29d-4262e9ae9c1d",
+    "CityId": 109,
     "FirstName": "George",
     "LastName": "Martinez",
-    "Description": "Security Expert",
-    "Skills": [ "Network Security", "Cryptography", "Penetration Testing" ],
-    "Img": "https://randomuser.me/api/portraits/men/9.jpg",
-    "CityId": 109,
-    "Number": "+9012345678",
-    "Github": "https://github.com/georgemartinez",
-    "LinkedIn": "https://linkedin.com/in/georgemartinez"
+    "Number": "\u002B9012345678"
   },
   {
-    "Id": 10,
+    "Github": "https://github.com/helenmoore",
+    "LinkedIn": "https://linkedin.com/in/helenmoore",
+    "Description": "Quality Assurance Tester",
+    "Skills": [
+      "Automated Testing",
+      "Bug Reporting",
+      "Test Management"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/10.jpg",
+    "Id": "6fa20424-6545-4ac5-9b6c-5dd1253e82bc",
+    "CityId": 110,
     "FirstName": "Helen",
     "LastName": "Moore",
-    "Description": "Quality Assurance Tester",
-    "Skills": [ "Automated Testing", "Bug Reporting", "Test Management" ],
-    "Img": "https://randomuser.me/api/portraits/women/10.jpg",
-    "CityId": 110,
-    "Number": "+1123456789",
-    "Github": "https://github.com/helenmoore",
-    "LinkedIn": "https://linkedin.com/in/helenmoore"
+    "Number": "\u002B1123456789"
+  },
+  {
+    "Github": null,
+    "LinkedIn": null,
+    "Description": "Software Developer",
+    "Skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "Img": "https://media.licdn.com/dms/image/v2/D4E03AQG8RBRcX2v_NQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725996223491?e=2147483647\u0026v=beta\u0026t=pYEEfjczYXU4akUG1P-lDkpyEAz1736FDvXT6mYFIjU",
+    "Id": "447733a4-2b9b-4860-b3f3-50d69516e5ae",
+    "CityId": 109,
+    "FirstName": "Mirtalib",
+    "LastName": "Amirli",
+    "Number": "\u002B944515880319"
+  },
+  {
+    "Github": null,
+    "LinkedIn": null,
+    "Description": "Designer",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb\u0026dl=pexels-simon-robben-55958-614810.jpg\u0026fm=jpg",
+    "Id": "86b2fee7-0a2c-4376-8d8d-7ed3155340d1",
+    "CityId": 103,
+    "FirstName": "Adil",
+    "LastName": "Aliyev",
+    "Number": "0519605083"
   }
+  
 ]

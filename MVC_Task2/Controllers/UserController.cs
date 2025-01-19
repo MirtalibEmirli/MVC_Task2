@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MVC_Task2.DTO;
 using MVC_Task2.Entities.Concretes;
+using MVC_Task2.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
 
@@ -33,18 +37,51 @@ namespace MVC_Task2.Controllers
             new City { AreaCode = 120, Name = "Washington D.C." }
         };
         List<User> Users { get; set; }
-        [HttpGet]  
+     
+
+        [HttpGet]
         public IActionResult Add()
         {
-            return View();
+            var sCities = new List<SelectListItem>();
+            foreach (var item in cities)
+            {
+                sCities.Add(new SelectListItem { Text = item.Name, Value = item.AreaCode.ToString() });
+            }
+
+            var vm = new UserAddViewModel()
+            {
+                Cities = sCities,
+                User = new User(),
+             
+            };
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult Add(UserAddViewModel userVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = userVM.User;
+                Users = ReadAllUsers();
+                Users.Add(user);
+                WriteAllUsers();
+
+
+            }
+
+            return View(userVM);
+
         }
 
 
-        public IActionResult Details(int id=-1) {
+        public IActionResult Details(Guid id)
+        {
 
-            if (id!=-1)
+            if (id != Guid.Empty)
             {
-                var user = Read(id);
+                var user = ReadByID(id);
                 UserDTO userDTO = new UserDTO
                 {
                     FirstName = user.FirstName,
@@ -52,22 +89,14 @@ namespace MVC_Task2.Controllers
                     Github = user.Github,
                     Number = user.Number,
                 };
+
                 userDTO.City = cities.FirstOrDefault(city => city.AreaCode == user.CityId).Name;
                 return View(userDTO);
 
             }
-            else { Read(); return Json(Users); }
-            
-            
-        }
-        public User Read(int id=-1)
-        {
-            string path = @"Helpers\users.json";
-            string text = System.IO.File.ReadAllText(path);
-            var users = JsonSerializer.Deserialize<List<User>>(text);
-            Users = users;
-            var user = users.FirstOrDefault(u => u.Id == id);
-            return user;
+            else { ReadAllUsers(); return Json(Users); }
+
+
         }
 
         public IActionResult Back()
@@ -75,7 +104,31 @@ namespace MVC_Task2.Controllers
             return Redirect("/home/index");
         }
 
+        public User ReadByID(Guid id)
+        {
+            var users = ReadAllUsers();
+            var user = users.First(u => u.Id == id);
+            return user ?? new User();
+        }
 
+        public List<User> ReadAllUsers()
+        {
+
+            string path = @"Helpers\users.json";
+            string text = System.IO.File.ReadAllText(path);
+            var users = JsonSerializer.Deserialize<List<User>>(text).ToList();
+
+            return users ?? new List<User>(); ;
+        }
+
+        public void WriteAllUsers()
+        {
+            string path = @"Helpers\users.json";
+            var options = new JsonSerializerOptions() { WriteIndented = true };
+            var data = JsonSerializer.Serialize(Users, options);
+            System.IO.File.WriteAllText(path, data);
+            Console.WriteLine(data);
+        }
 
     }
 
