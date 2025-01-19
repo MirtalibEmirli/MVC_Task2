@@ -164,9 +164,9 @@
     "LinkedIn": null,
     "Description": "Software Developer",
     "Skills": [
-      "HTML",
-      "CSS",
-      "JavaScript"
+      "C#",
+      "ASP.NET Core",
+      "React.js"
     ],
     "Img": "https://media.licdn.com/dms/image/v2/D4E03AQG8RBRcX2v_NQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725996223491?e=2147483647\u0026v=beta\u0026t=pYEEfjczYXU4akUG1P-lDkpyEAz1736FDvXT6mYFIjU",
     "Id": "447733a4-2b9b-4860-b3f3-50d69516e5ae",
@@ -180,8 +180,8 @@
     "LinkedIn": null,
     "Description": "Designer",
     "Skills": [
-      "C#",
-      "ASP.NET Core",
+      "HTML",
+      "Css",
       "React.js"
     ],
     "Img": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb\u0026dl=pexels-simon-robben-55958-614810.jpg\u0026fm=jpg",
@@ -190,6 +190,5 @@
     "FirstName": "Adil",
     "LastName": "Aliyev",
     "Number": "0519605083"
-  }
-  
+  } 
 ]

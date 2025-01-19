@@ -68,12 +68,31 @@ namespace MVC_Task2.Controllers
                 Users.Add(user);
                 WriteAllUsers();
 
+                return Redirect("/home/index");
+            }
+            else
+            {
+                var sCities = new List<SelectListItem>();
+                foreach (var item in cities)
+                {
+                    sCities.Add(new SelectListItem { Text = item.Name, Value = item.AreaCode.ToString() });
+                }
 
+                var vm = new UserAddViewModel()
+                {
+                    Cities = sCities,
+                    User = new User(),
+
+                };
+                return View(vm);
             }
 
-            return View(userVM);
 
-        }
+
+
+
+
+            }
 
 
         public IActionResult Details(Guid id)
