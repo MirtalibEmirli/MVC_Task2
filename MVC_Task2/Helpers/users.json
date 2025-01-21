@@ -190,5 +190,21 @@
     "FirstName": "Adil",
     "LastName": "Aliyev",
     "Number": "0519605083"
-  } 
+  },
+  {
+    "Github": null,
+    "LinkedIn": null,
+    "Description": "Software Developer",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
+    "Id": "9897bc5f-b439-4624-9811-2b3608422fcf",
+    "CityId": 101,
+    "FirstName": "Mirtalib",
+    "LastName": "Amirli",
+    "Number": "\u002B944515880319"
+  }
 ]
