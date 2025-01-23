@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using MVC_Task2.Entities.Concretes;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 
@@ -26,23 +27,26 @@ namespace MVC_Task2.TagHelpers
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "section";
-
+           
             StringBuilder sb = new();
             if (sortFormat == null || sortFormat.ToLower() == "a-z")
             {
-                foreach (var item in Users)
+                var sortedList = Users.OrderBy(u=>u.FirstName).ToList();    
+                foreach (var item in sortedList)
                 {
-                    //< h2 >< a href = 'employee/detail/{0}' >{ 1}</ a ></ h2 >
-                    sb.AppendFormat("<h3><a  href='user/details/{'>{1}</ a ></ h3>", item.Id, item.FirstName);
+                    
+                    sb.AppendFormat("<h3><a  href='/user/details/{0}'>{1}</a ></h3>", item.Id, item.FirstName);
                 }
             }
             else { 
-
-
+                var sortedList = Users.OrderByDescending(u=>u.FirstName);
+                foreach (var item in sortedList)
+                {
+                    sb.AppendFormat("<h3><a href='/user/details/{0}>{1}</a></h3>",item.Id,item.FirstName);
+                }
             }
             output.Content.SetHtmlContent(sb.ToString());
         }
-
 
         public string Read()
         {
