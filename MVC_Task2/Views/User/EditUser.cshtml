@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MVC_Task2.Models.UserEditViewModel  
 @{
     Layout = null;
 }
@@ -10,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add User</title>
+    <title>Edit User</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet" />
         <style >
@@ -122,6 +120,62 @@
        
 </head>
 <body>
+    <div class="form-container">
+        <h1>Edit User</h1>
+    <form asp-controller="User" asp-action="EditUser" method="post">
+            <input type="hidden" asp-for="User.Id" />
+        <section>
+            <label asp-for="User.FirstName"></label>
+            <input asp-for="User.FirstName" />
+            <span asp-validation-for="User.FirstName"></span>
+        </section>
+      
+        <div class="form-section">
+            <label asp-for="User.LastName"></label>
+            <input asp-for="User.LastName" />
+            <span asp-validation-for="User.LastName" class="validation-message"></span>
+        </div>
+
+        <div class="form-section">
+            <label asp-for="User.Number"></label>
+            <input asp-for="User.Number" />
+            <span asp-validation-for="User.Number" class="validation-message"></span>
+        </div>
+
+        <div class="form-section">
+            <label asp-for="User.Img"></label>
+            <input asp-for="User.Img" />
+            <span asp-validation-for="User.Img" class="validation-message"></span>
+        </div>
+
+        <div class="form-section">
+            <label asp-for="User.Description"></label>
+            <input asp-for="User.Description" />
+            <span asp-validation-for="User.Description" class="validation-message"></span>
+        </div>
+        <section class="form-section">
+            <label asp-for="User.Github"></label>
+            <input asp-for="User.Github" />
+            <span asp-validation-for="User.Github"></span>
+        </section>
+        <section class="form-section">
+            <label asp-for="User.LinkedIn"></label>
+            <input asp-for="User.LinkedIn" />
+            <span asp-validation-for="User.LinkedIn"></span>
+        </section>
+        <div class="form-section">
+            <label asp-for="User.CityId"></label>
+            <select asp-items="Model.Cities" asp-for="User.CityId"></select>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Edit</button>
+            <a asp-action="Back" asp-controller="User">Back</a>
+                <a asp-action="Delete" asp-route-id="@Model.User.Id" asp-controller="User">Delete</a>
+
+        </div>
+    </form>
+    </div>
 
 </body>
 </html>

@@ -1,21 +1,5 @@
 [
   {
-    "Github": "https://github.com/johndoe",
-    "LinkedIn": "https://linkedin.com/in/johndoe",
-    "Description": "Software Developer",
-    "Skills": [
-      "C#",
-      "ASP.NET Core",
-      "React.js"
-    ],
-    "Img": "https://randomuser.me/api/portraits/men/1.jpg",
-    "Id": "f77e4eb1-c437-48ba-9b8a-78b05c5cb5b5",
-    "CityId": 101,
-    "FirstName": "John",
-    "LastName": "Doe",
-    "Number": "\u002B1234567890"
-  },
-  {
     "Github": "https://github.com/janesmith",
     "LinkedIn": "https://linkedin.com/in/janesmith",
     "Description": "UI/UX Designer",
@@ -30,22 +14,6 @@
     "FirstName": "Jane",
     "LastName": "Smith",
     "Number": "\u002B2345678901"
-  },
-  {
-    "Github": "https://github.com/alicejohnson",
-    "LinkedIn": "https://linkedin.com/in/alicejohnson",
-    "Description": "Project Manager",
-    "Skills": [
-      "Agile",
-      "Scrum",
-      "Communication"
-    ],
-    "Img": "https://randomuser.me/api/portraits/women/3.jpg",
-    "Id": "9e05b729-b711-4f21-b6b7-44c6c6f6d779",
-    "CityId": 103,
-    "FirstName": "Alice",
-    "LastName": "Johnson",
-    "Number": "\u002B3456789012"
   },
   {
     "Github": "https://github.com/bobbrown",
@@ -176,35 +144,19 @@
     "Number": "\u002B944515880319"
   },
   {
-    "Github": null,
-    "LinkedIn": null,
-    "Description": "Designer",
-    "Skills": [
-      "HTML",
-      "Css",
-      "React.js"
-    ],
-    "Img": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb\u0026dl=pexels-simon-robben-55958-614810.jpg\u0026fm=jpg",
-    "Id": "86b2fee7-0a2c-4376-8d8d-7ed3155340d1",
-    "CityId": 103,
-    "FirstName": "Adil",
-    "LastName": "Aliyev",
-    "Number": "0519605083"
-  },
-  {
-    "Github": null,
-    "LinkedIn": null,
-    "Description": "Software Developer",
+    "Github": "https://github.com/alicejohnson",
+    "LinkedIn": "https://linkedin.com/in/alicejohnson",
+    "Description": "Project Manager",
     "Skills": [
       "C#",
       "ASP.NET Core",
       "React.js"
     ],
-    "Img": "https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2247726673.jpg",
-    "Id": "9897bc5f-b439-4624-9811-2b3608422fcf",
-    "CityId": 101,
-    "FirstName": "Mirtalib",
-    "LastName": "Amirli",
-    "Number": "\u002B944515880319"
+    "Img": "https://randomuser.me/api/portraits/women/3.jpg",
+    "Id": "9e05b729-b711-4f21-b6b7-44c6c6f6d779",
+    "CityId": 112,
+    "FirstName": "Alice",
+    "LastName": "Johnson",
+    "Number": "\u002B3456789012"
   }
 ]

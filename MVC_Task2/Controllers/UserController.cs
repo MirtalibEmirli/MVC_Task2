@@ -37,7 +37,7 @@ namespace MVC_Task2.Controllers
             new City { AreaCode = 120, Name = "Washington D.C." }
         };
         List<User> Users { get; set; }
-     
+
 
         [HttpGet]
         public IActionResult Add()
@@ -52,7 +52,7 @@ namespace MVC_Task2.Controllers
             {
                 Cities = sCities,
                 User = new User(),
-             
+
             };
 
             return View(vm);
@@ -67,6 +67,7 @@ namespace MVC_Task2.Controllers
                 Users = ReadAllUsers();
                 Users.Add(user);
                 WriteAllUsers();
+
 
                 return Redirect("/home/index");
             }
@@ -92,7 +93,7 @@ namespace MVC_Task2.Controllers
 
 
 
-            }
+        }
 
 
         public IActionResult Details(Guid id)
@@ -117,6 +118,81 @@ namespace MVC_Task2.Controllers
 
 
         }
+        [HttpGet]
+        public IActionResult EditUser(Guid id)
+        {
+
+            if (id != Guid.Empty)
+            {
+                Users = ReadAllUsers();
+                var user = Users.FirstOrDefault(u => u.Id == id);
+                Console.WriteLine(user.Id + " IN GET");
+                var sCities = new List<SelectListItem>();
+                foreach (var item in cities)
+                {
+                    sCities.Add(new SelectListItem { Text = item.Name, Value = item.AreaCode.ToString() });
+
+                }
+
+                var vm = new UserEditViewModel()
+                {
+                    Cities = sCities,
+                    User = user,
+                };
+                return View(vm);
+            }
+            else { return Redirect("/home/index"); }
+        }
+
+        [HttpPost]
+        public IActionResult EditUser(UserEditViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = vm.User;
+
+
+
+                Users = ReadAllUsers();
+
+                var userToRemove = Users.FirstOrDefault(u => u.Id == user.Id);
+                if (userToRemove != null)
+                {
+                    Users.Remove(userToRemove);
+                }
+
+
+                Users.Add(user);
+
+                WriteAllUsers();
+            }
+
+            return Redirect("/home/index");
+        }
+
+        public IActionResult Delete(Guid id)
+        {
+
+            if (id != Guid.Empty)
+            {
+                Console.WriteLine(id + "deleted user id");
+
+
+                Users = ReadAllUsers();
+
+                var userToRemove = Users.FirstOrDefault(u => u.Id == id);
+                if (userToRemove != null)
+                {
+                    Users.Remove(userToRemove);
+                    Console.WriteLine("deleted user");
+
+                }
+
+                WriteAllUsers();
+            }
+            return Redirect("/home/index");
+        }
+
 
         public IActionResult Back()
         {
@@ -146,8 +222,10 @@ namespace MVC_Task2.Controllers
             var options = new JsonSerializerOptions() { WriteIndented = true };
             var data = JsonSerializer.Serialize(Users, options);
             System.IO.File.WriteAllText(path, data);
-            Console.WriteLine(data);
+
         }
+
+
 
     }
 

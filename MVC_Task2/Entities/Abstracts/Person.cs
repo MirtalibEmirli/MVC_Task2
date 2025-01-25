@@ -6,7 +6,10 @@ namespace MVC_Task2.Entities.Abstracts
 {
     public abstract class Person
     {
-         protected Person() { Id = Guid.NewGuid(); } 
+        protected Person()
+        {
+            Id = Guid.NewGuid();
+        }
         public Guid Id { get; set; }
 
         [Required]
