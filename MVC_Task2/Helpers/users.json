@@ -16,86 +16,6 @@
     "Number": "\u002B2345678901"
   },
   {
-    "Github": "https://github.com/bobbrown",
-    "LinkedIn": "https://linkedin.com/in/bobbrown",
-    "Description": "Full Stack Developer",
-    "Skills": [
-      "JavaScript",
-      "Node.js",
-      "MongoDB"
-    ],
-    "Img": "https://randomuser.me/api/portraits/men/4.jpg",
-    "Id": "d843f9cc-6a82-4ebd-95e3-c26aa5a55392",
-    "CityId": 104,
-    "FirstName": "Bob",
-    "LastName": "Brown",
-    "Number": "\u002B4567890123"
-  },
-  {
-    "Github": "https://github.com/charliedavis",
-    "LinkedIn": "https://linkedin.com/in/charliedavis",
-    "Description": "Marketing Specialist",
-    "Skills": [
-      "SEO",
-      "Content Strategy",
-      "Social Media"
-    ],
-    "Img": "https://randomuser.me/api/portraits/men/5.jpg",
-    "Id": "a22e5be6-7c54-46f6-96b4-2f94a9b7d9d2",
-    "CityId": 105,
-    "FirstName": "Charlie",
-    "LastName": "Davis",
-    "Number": "\u002B5678901234"
-  },
-  {
-    "Github": "https://github.com/danaevans",
-    "LinkedIn": "https://linkedin.com/in/danaevans",
-    "Description": "Frontend Developer",
-    "Skills": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "Img": "https://randomuser.me/api/portraits/women/6.jpg",
-    "Id": "48668f60-8f58-4b46-826b-ec9d1f4f8d79",
-    "CityId": 106,
-    "FirstName": "Dana",
-    "LastName": "Evans",
-    "Number": "\u002B6789012345"
-  },
-  {
-    "Github": "https://github.com/edwardgarcia",
-    "LinkedIn": "https://linkedin.com/in/edwardgarcia",
-    "Description": "Data Scientist",
-    "Skills": [
-      "Python",
-      "Machine Learning",
-      "SQL"
-    ],
-    "Img": "https://randomuser.me/api/portraits/men/7.jpg",
-    "Id": "32b33e68-c61f-49d3-b0ef-bf27243d35db",
-    "CityId": 107,
-    "FirstName": "Edward",
-    "LastName": "Garcia",
-    "Number": "\u002B7890123456"
-  },
-  {
-    "Github": "https://github.com/fionahernandez",
-    "LinkedIn": "https://linkedin.com/in/fionahernandez",
-    "Description": "Database Administrator",
-    "Skills": [
-      "SQL",
-      "PostgreSQL",
-      "MySQL"
-    ],
-    "Img": "https://randomuser.me/api/portraits/women/8.jpg",
-    "Id": "cb9eea49-379c-4d1f-87b8-10db071c23f1",
-    "CityId": 108,
-    "FirstName": "Fiona",
-    "LastName": "Hernandez",
-    "Number": "\u002B8901234567"
-  },
-  {
     "Github": "https://github.com/georgemartinez",
     "LinkedIn": "https://linkedin.com/in/georgemartinez",
     "Description": "Security Expert",
@@ -128,22 +48,6 @@
     "Number": "\u002B1123456789"
   },
   {
-    "Github": null,
-    "LinkedIn": null,
-    "Description": "Software Developer",
-    "Skills": [
-      "C#",
-      "ASP.NET Core",
-      "React.js"
-    ],
-    "Img": "https://media.licdn.com/dms/image/v2/D4E03AQG8RBRcX2v_NQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725996223491?e=2147483647\u0026v=beta\u0026t=pYEEfjczYXU4akUG1P-lDkpyEAz1736FDvXT6mYFIjU",
-    "Id": "447733a4-2b9b-4860-b3f3-50d69516e5ae",
-    "CityId": 109,
-    "FirstName": "Mirtalib",
-    "LastName": "Amirli",
-    "Number": "\u002B944515880319"
-  },
-  {
     "Github": "https://github.com/alicejohnson",
     "LinkedIn": "https://linkedin.com/in/alicejohnson",
     "Description": "Project Manager",
@@ -158,5 +62,69 @@
     "FirstName": "Alice",
     "LastName": "Johnson",
     "Number": "\u002B3456789012"
+  },
+  {
+    "Github": "https://github.com/charliedavis",
+    "LinkedIn": "https://linkedin.com/in/charliedavis",
+    "Description": "Marketing Specialist",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://randomuser.me/api/portraits/men/5.jpg",
+    "Id": "a22e5be6-7c54-46f6-96b4-2f94a9b7d9d2",
+    "CityId": 105,
+    "FirstName": "Charli",
+    "LastName": "Davis",
+    "Number": "\u002B5678901234"
+  },
+  {
+    "Github": "https://github.com/MirtalibEmirli",
+    "LinkedIn": "https://az.linkedin.com/in/mirtalib-emirli-a66922287",
+    "Description": "Software Developer",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://media.licdn.com/dms/image/v2/D4E03AQG8RBRcX2v_NQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725996223491?e=2147483647\u0026v=beta\u0026t=pYEEfjczYXU4akUG1P-lDkpyEAz1736FDvXT6mYFIjU",
+    "Id": "447733a4-2b9b-4860-b3f3-50d69516e5ae",
+    "CityId": 120,
+    "FirstName": "Mirtalib",
+    "LastName": "Amirli",
+    "Number": "\u002B944515880319"
+  },
+  {
+    "Github": "https://github.com/danaevans",
+    "LinkedIn": "https://linkedin.com/in/danaevans",
+    "Description": "Frontend Developer",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/6.jpg",
+    "Id": "48668f60-8f58-4b46-826b-ec9d1f4f8d79",
+    "CityId": 106,
+    "FirstName": "Danae",
+    "LastName": "Evans",
+    "Number": "\u002B6789012345"
+  },
+  {
+    "Github": "https://github.com/fionahernandez",
+    "LinkedIn": "https://linkedin.com/in/fionahernandez",
+    "Description": "Database Administrator",
+    "Skills": [
+      "C#",
+      "ASP.NET Core",
+      "React.js"
+    ],
+    "Img": "https://randomuser.me/api/portraits/women/8.jpg",
+    "Id": "cb9eea49-379c-4d1f-87b8-10db071c23f1",
+    "CityId": 108,
+    "FirstName": "Fionaa",
+    "LastName": "Hernandez",
+    "Number": "\u002B8901234567"
   }
 ]

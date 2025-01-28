@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Routing;
+using MVC_Task2.Context;
 using MVC_Task2.DTO;
 using MVC_Task2.Entities.Concretes;
 using MVC_Task2.Models;
@@ -11,7 +13,9 @@ using System.Text.Json;
 
 namespace MVC_Task2.Controllers
 {
-    public class UserController : Controller
+    //[Route("mvc/[controller]/[action]")]// bu formada isleyir amma actionnu silsek biz gerek 
+    //her bir action uzerinde route yazaqki taninsin
+    public class UserController: Controller
     {
         List<City> cities = new List<City>
         {
@@ -37,8 +41,11 @@ namespace MVC_Task2.Controllers
             new City { AreaCode = 120, Name = "Washington D.C." }
         };
         List<User> Users { get; set; }
-
-
+        private readonly FreelancerDbcontext dbcontext ;
+        public UserController(FreelancerDbcontext freelancerDbcontext)
+        {
+            dbcontext=freelancerDbcontext;
+        }
         [HttpGet]
         public IActionResult Add()
         {
@@ -118,6 +125,13 @@ namespace MVC_Task2.Controllers
 
 
         }
+        [Route("user")]
+        [Route("work")]
+        public IActionResult Render()
+        {
+           var users = ReadAllUsers();
+            return Json(users); 
+        }
         [HttpGet]
         public IActionResult EditUser(Guid id)
         {
@@ -125,6 +139,7 @@ namespace MVC_Task2.Controllers
             if (id != Guid.Empty)
             {
                 Users = ReadAllUsers();
+
                 var user = Users.FirstOrDefault(u => u.Id == id);
                 Console.WriteLine(user.Id + " IN GET");
                 var sCities = new List<SelectListItem>();
@@ -155,6 +170,7 @@ namespace MVC_Task2.Controllers
 
                 Users = ReadAllUsers();
 
+                
                 var userToRemove = Users.FirstOrDefault(u => u.Id == user.Id);
                 if (userToRemove != null)
                 {
@@ -196,6 +212,7 @@ namespace MVC_Task2.Controllers
 
         public IActionResult Back()
         {
+
             return Redirect("/home/index");
         }
 

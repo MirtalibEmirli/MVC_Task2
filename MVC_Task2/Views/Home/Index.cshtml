@@ -1,9 +1,9 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
 @model IEnumerable<MVC_Task2.Entities.Concretes.User>;
 
- 
+@{
+    var p = "~/Views/PartialViews";
+}
     
     <div class="container">
         @foreach (var item in Model)
@@ -36,4 +36,18 @@
             </div>
         }
     </div>
+@*viewcomponent cagiormaq*@
+@* @await Component.InvokeAsync("Slider") ozaman olarki dbden melumat cekir 
+asinxronluqaehtiyyac var
+*@
+<vc:slider></vc:slider> @*Tag helper ile*@
+
+@* @await Html.PartialAsync("~/Views/PartialViews/_PartialHome.cshtml") @* way1  
+
+*@
+@* way2  for partial view  with tag-helper*@
+<partial name="@p/_PartialHome.cshtml" data="@Model"/>
+
+
+
  

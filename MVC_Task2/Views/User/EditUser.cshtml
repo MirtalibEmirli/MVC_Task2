@@ -3,6 +3,7 @@
     Layout = null;
 }
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -170,8 +171,8 @@
 
         <div class="button-container">
             <button type="submit">Edit</button>
+                <a asp-action="Delete" style="background-color:red" asp-route-id="@Model.User.Id" asp-controller="User">Delete</a>
             <a asp-action="Back" asp-controller="User">Back</a>
-                <a asp-action="Delete" asp-route-id="@Model.User.Id" asp-controller="User">Delete</a>
 
         </div>
     </form>

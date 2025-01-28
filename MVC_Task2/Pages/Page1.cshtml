@@ -1,0 +1,88 @@
+﻿@page
+@model MVC_Task2.Pages.Page1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-2">
+    <h1 class="text-danger text-center mb-4">Special Info @Model.Message</h1>
+
+   
+
+    <!-- Table Section -->
+    <div class="card shadow-lg p-3">
+        <div class="card-body">
+            <h4 class="card-title text-primary">User List</h4>
+            <table class="table table-hover table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Number</th>
+                        <th>Description</th>
+                        <th>City ID</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Users)
+                    {
+                        <tr style=" margin-bottom: 10px; border-radius: 10px; overflow: hidden; background: white;">
+                            <td style=" padding: 10px;">@item.FirstName</td>
+                            <td style=" padding: 10px;">@item.LastName</td>
+                            <td style=" padding: 10px;">@item.Number</td>
+                            <td style=" padding: 10px;">@item.Description</td>
+                            <td style=" padding: 10px;">@item.CityId</td>
+                            <td style=" padding: 10px;">
+                                <a  asp-action="EditUser" asp-controller="User" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Edit</a>
+                                <a asp-action="EditUser" asp-route-id="@item.Id" asp-controller="User"          class="btn btn-outline-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Add New User</h4>
+                    <form method="post"  >
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input asp-for="User.FirstName" type="text" class="form-control" placeholder="Enter first name">
+                            <span asp-validation-for="User.FirstName"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input asp-for="User.LastName" type="text" class="form-control" placeholder="Enter last name">                            <span asp-validation-for="User.LastName" style="color:red;"></span>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea asp-for="User.Description" class="form-control" rows="3" placeholder="Enter description"></textarea>
+                            <span asp-validation-for="User.Description" style="color:red;"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Image URL</label>
+                            <input asp-for="User.Img" type="text" class="form-control" placeholder="Paste image URL">
+                            <span asp-validation-for="User.Img" style="color:red;"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-plus"></i> Add User
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

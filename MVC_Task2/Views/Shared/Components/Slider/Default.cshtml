@@ -1,0 +1,38 @@
+﻿@model List<string>
+
+<section style="background-color: #f8f9fa; padding: 50px 0; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h2 style="font-size: 2.5rem; color: #333; margin-bottom: 20px;">Xidmətlər</h2>
+        <p style="font-size: 1.2rem; color: #666;">Freelancerlər üçün mükəmməl platforma. İşlərə qoşulun, yeni layihələr tapın və bacarıqlarınızı inkişaf etdirin.</p>
+        <div id="slider" style="position: relative; max-width: 100%; overflow: hidden; margin: 30px auto;">
+            <div class="slides" style="display: flex; transition: transform 0.5s ease-in-out;">
+               
+              @foreach (var item in Model)
+                {
+                    <div class="slide" style="min-width: 100%; padding: 20px;">
+                        <img src=@item   alt="İş Tap" style="width: 100%; border-radius: 10px;">
+                    </div>
+                }
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 200px; gap: 10px;">
+            <button onclick="prevSlide()" style="background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>
+            <button onclick="nextSlide()" style="background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+        </div>
+
+
+        <script>
+            let currentIndex = 0;
+            function showSlide(index) {
+                const slides = document.querySelector('.slides');
+                const totalSlides = document.querySelectorAll('.slide').length;
+                if (index >= totalSlides) currentIndex = 0;
+                if (index < 0) currentIndex = totalSlides - 1;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+            function nextSlide() { currentIndex++; showSlide(currentIndex); }
+            function prevSlide() { currentIndex--; showSlide(currentIndex); }
+            setInterval(nextSlide, 3000);
+        </script>
+    </div>
+</section>

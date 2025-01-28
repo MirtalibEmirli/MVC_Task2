@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVC_Task2.Entities.Concretes
 {
@@ -12,6 +13,7 @@ namespace MVC_Task2.Entities.Concretes
         public string LinkedIn { get; set; }
         [Required]
         public string Description { get; set; }
+        [NotMapped]
         public List<string> Skills { get; set; } = new List<string>() { "C#",
       "ASP.NET Core",
       "React.js"};
