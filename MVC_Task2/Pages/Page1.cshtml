@@ -8,8 +8,6 @@
 <div class="container-2">
     <h1 class="text-danger text-center mb-4">Special Info @Model.Message</h1>
 
-   
-
     <!-- Table Section -->
     <div class="card shadow-lg p-3">
         <div class="card-body">
@@ -28,41 +26,43 @@
                 <tbody>
                     @foreach (var item in Model.Users)
                     {
-                        <tr style=" margin-bottom: 10px; border-radius: 10px; overflow: hidden; background: white;">
-                            <td style=" padding: 10px;">@item.FirstName</td>
-                            <td style=" padding: 10px;">@item.LastName</td>
-                            <td style=" padding: 10px;">@item.Number</td>
-                            <td style=" padding: 10px;">@item.Description</td>
-                            <td style=" padding: 10px;">@item.CityId</td>
-                            <td style=" padding: 10px;">
-                                <a  asp-action="EditUser" asp-controller="User" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Edit</a>
-                                <a asp-action="EditUser" asp-route-id="@item.Id" asp-controller="User"          class="btn btn-outline-danger btn-sm">Delete</a>
+                        <tr style="margin-bottom: 10px; border-radius: 10px; overflow: hidden; background: white;">
+                            <td style="padding: 10px;">@item.FirstName</td>
+                            <td style="padding: 10px;">@item.LastName</td>
+                            <td style="padding: 10px;">@item.Number</td>
+                            <td style="padding: 10px;">@item.Description</td>
+                            <td style="padding: 10px;">@item.CityId</td>
+                            <td style="padding: 10px;">
+                                <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Edit</a>
+
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id"
+                                      style="display:inline;">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     }
                 </tbody>
-
             </table>
         </div>
     </div>
 
-    
     <div class="row justify-content-center mt-4">
         <div class="col-md-6">
             <div class="card shadow-lg">
                 <div class="card-body">
                     <h4 class="card-title text-primary">Add New User</h4>
-                    <form method="post"  >
+                    <form method="post">
                         <div class="mb-3">
                             <label class="form-label">First Name</label>
                             <input asp-for="User.FirstName" type="text" class="form-control" placeholder="Enter first name">
-                            <span asp-validation-for="User.FirstName"></span>
+                            <span asp-validation-for="User.FirstName" style="color:red;"></span>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Last Name</label>
-                            <input asp-for="User.LastName" type="text" class="form-control" placeholder="Enter last name">                            <span asp-validation-for="User.LastName" style="color:red;"></span>
-
+                            <input asp-for="User.LastName" type="text" class="form-control" placeholder="Enter last name">
+                            <span asp-validation-for="User.LastName" style="color:red;"></span>
                         </div>
 
                         <div class="mb-3">

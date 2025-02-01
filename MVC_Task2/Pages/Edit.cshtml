@@ -1,0 +1,46 @@
+﻿@page "{id:Guid}"
+@model MVC_Task2.Pages.EditModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-primary">Edit User</h2>
+
+    @if (Model.User == null)
+    {
+        <p class="text-danger">User not found!</p>
+    }
+    else
+    {
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input asp-for="User.FirstName" type="text" class="form-control" required>
+                <span asp-validation-for="User.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input asp-for="User.LastName" type="text" class="form-control" required>
+                <span asp-validation-for="User.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea asp-for="User.Description" class="form-control" required></textarea>
+                <span asp-validation-for="User.Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Image URL</label>
+                <input asp-for="User.Img" type="text" class="form-control">
+                <span asp-validation-for="User.Img" class="text-danger"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-success">Save</button>
+            <a asp-page="Page1" class="btn btn-secondary">Cancel</a>
+        </form>
+    }
+</div>
